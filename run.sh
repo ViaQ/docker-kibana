@@ -8,4 +8,4 @@ if [ -z "$ES_CA" ] ; then
     sed -i 's/^\(ca:.*\)$/# \1/' /opt/app-root/src/config/kibana.yml
 fi
 
-kibana
+/opt/app-root/src/bin/kibana
