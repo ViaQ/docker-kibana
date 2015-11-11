@@ -1,0 +1,6 @@
+[general]
+namespace = bitscout-kibana
+provider = docker
+[bitscout-kibana]
+elasticsearchhost = 172.17.42.1
+uid = 1000
