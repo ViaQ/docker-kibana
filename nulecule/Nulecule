@@ -1,0 +1,27 @@
+---
+specversion: 0.0.2
+id: bitscout-kibana-app
+
+metadata:
+  name: Kibana for BitScout
+  appversion: 0.0.1
+  description: BitScout implementation of Kibana
+
+graph:
+  - name: bitscout-kibana
+    params:
+      - name: appname
+        description: Name given to docker run --name
+        default: bitscout-kibana
+      - name: image
+        description: Image to run
+        default: bitscout/kibana:latest
+      - name: uid
+        description: "User id to use to run kibana (hint: use numeric if not root)"
+        default: root
+      - name: elasticsearchhost
+        description: host/ip addr to use to connect to elasticsearch
+        default: localhost
+    artifacts:
+      docker:
+        - file://artifacts/docker/run
